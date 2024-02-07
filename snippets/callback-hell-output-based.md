@@ -2,11 +2,11 @@
    <h1>Callback Hell in JavaScript</h1>
 </div>
 
-<ol>
+<ul>
 
    <li>
 
-   **What will be the output of the following code snippet?**
+   **Question 1: What will be the output of the following code snippet?**
 
    ```javascript
    function fetchData(callback) {
@@ -31,7 +31,7 @@
    
    <li>
 
-   **What is the output of the following code snippet?**
+   **Question 2: What is the output of the following code snippet?**
 
    ```javascript
    function fetchData(callback) {
@@ -59,7 +59,7 @@
    
    <li>
 
-   **What will be the output of the following code snippet?**
+   **Question 3: What will be the output of the following code snippet?**
 
    ```javascript
    function fetchData(callback) {
@@ -90,7 +90,7 @@
    
    <li>
 
-   **What is the output of the following code snippet?**
+   **Question 4: What is the output of the following code snippet?**
 
    ```javascript
    function fetchData(callback) {
@@ -124,7 +124,7 @@
    
    <li>
 
-   **What will be the output of the following code snippet?**
+   **Question 5: What will be the output of the following code snippet?**
 
    ```javascript
    function fetchData(callback) {
@@ -161,7 +161,7 @@
    
    <li>
 
-   **What is the output of the following code snippet?**
+   **Question 6: What is the output of the following code snippet?**
 
    ```javascript
    function fetchData(callback) {
@@ -201,7 +201,7 @@
    
    <li>
 
-   **What will be the output of the following code snippet?**
+   **Question 7: What will be the output of the following code snippet?**
 
    ```javascript
    function fetchData(callback) {
@@ -235,3 +235,160 @@
 
    <details>
    <summary><b>Answer</b></summary
+
+>
+   <p>
+   Output: "First data" (followed by "Second data", "Third data", "Fourth data", "Fifth data", "Sixth data", and "Seventh data" with 1-second intervals)
+   Explanation: The fetchData function schedules multiple callbacks with increasing delays, resulting in sequential output of the fetched data.
+   </p>
+   </details>
+   </li>
+   
+   <li>
+
+   **Question 8: What is the output of the following code snippet?**
+
+   ```javascript
+   function fetchData(callback) {
+     setTimeout(() => {
+       callback('First data');
+       setTimeout(() => {
+         callback('Second data');
+         setTimeout(() => {
+           callback('Third data');
+           setTimeout(() => {
+             callback('Fourth data');
+             setTimeout(() => {
+               callback('Fifth data');
+               setTimeout(() => {
+                 callback('Sixth data');
+                 setTimeout(() => {
+                   callback('Seventh data');
+                   setTimeout(() => {
+                     callback('Eighth data');
+                   }, 1000);
+                 }, 1000);
+               }, 1000);
+             }, 1000);
+           }, 1000);
+         }, 1000);
+       }, 1000);
+     }, 1000);
+   }
+
+   fetchData((data) => {
+     console.log(data);
+   });
+   ```
+
+   <details>
+   <summary><b>Answer</b></summary>
+   <p>
+   Output: "First data" (followed by "Second data", "Third data", "Fourth data", "Fifth data", "Sixth data", "Seventh data", and "Eighth data" with 1-second intervals)
+   Explanation: The fetchData function schedules multiple callbacks with increasing delays, resulting in sequential output of the fetched data.
+   </p>
+   </details>
+   </li>
+   
+   <li>
+
+   **Question 9: What will be the output of the following code snippet?**
+
+   ```javascript
+   function fetchData(callback) {
+     setTimeout(() => {
+       callback('First data');
+       setTimeout(() => {
+         callback('Second data');
+         setTimeout(() => {
+           callback('Third data');
+           setTimeout(() => {
+             callback('Fourth data');
+             setTimeout(() => {
+               callback('Fifth data');
+               setTimeout(() => {
+                 callback('Sixth data');
+                 setTimeout(() => {
+                   callback('Seventh data');
+                   setTimeout(() => {
+                     callback('Eighth data');
+                     setTimeout(() => {
+                       callback('Ninth data');
+                     }, 1000);
+                   }, 1000);
+                 }, 1000);
+               }, 1000);
+             }, 1000);
+           }, 1000);
+         }, 1000);
+       }, 1000);
+     }, 1000);
+   }
+
+   fetchData((data) => {
+     console.log(data);
+   });
+   ```
+
+   <details>
+   <summary><b>Answer</b></summary>
+   <p>
+   Output: "First data" (followed by "Second data", "Third data", "Fourth data", "Fifth data", "Sixth data", "Seventh data", "Eighth data", and "Ninth data" with 1-second intervals)
+   Explanation: The fetchData function schedules multiple callbacks with increasing delays, resulting in sequential output of the fetched data.
+   </p>
+   </details>
+   </li>
+   
+   <li>
+
+   **Question 10: What is the output of the following code snippet?**
+
+   ```javascript
+   function fetchData(callback) {
+     setTimeout(() => {
+       callback('First data');
+       setTimeout(() => {
+         callback('Second data');
+         setTimeout(() => {
+           callback('Third data');
+           setTimeout(() => {
+             callback('Fourth data');
+             setTimeout(() => {
+               callback('Fifth data');
+               setTimeout(() => {
+                 callback('Sixth data');
+                 setTimeout(() => {
+                   callback('Seventh data');
+                   setTimeout(() => {
+                     callback('Eighth data');
+                     setTimeout(() => {
+                       callback('Ninth data');
+                       setTimeout(() => {
+                         callback('Tenth data');
+                       }, 1000);
+                     }, 1000);
+                   }, 1000);
+                 }, 1000);
+               }, 1000);
+             }, 1000);
+           }, 1000);
+         }, 1000);
+       }, 1000);
+     }, 1000);
+   }
+
+   fetchData((data) => {
+     console.log(data);
+   });
+   ```
+
+   <details>
+   <summary><b>Answer</b></summary>
+   <p>
+   Output: "First data" (followed by "Second data", "Third data", "Fourth data", "Fifth data", "Sixth data", "Seventh data", "Eighth data", "Ninth data", and "Tenth data" with 1-second intervals)
+   Explanation: The fetchData function schedules multiple callbacks with increasing delays, resulting in sequential output of the fetched data.
+   </p>
+   </details>
+   </li>
+
+</ol>
